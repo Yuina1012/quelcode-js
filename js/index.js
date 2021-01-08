@@ -33,9 +33,9 @@ async function callApi(city = 'London') {
 const selectCity = () => {
 	const city = document.getElementById('city').value;
 	callApi(city)
-	.catch(err => {
-		console.log(err);
-	})
+		.catch(err => {
+			console.log(err);
+		})
 }
 callApi()
 	.catch(err => {
