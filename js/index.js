@@ -10,14 +10,7 @@ const selectCity = () => {
 	async function callApi() {
 		const res = await fetch(requestUrl);
 		const weather = await res.json();//jsonメソッドで呼び出す
-		console.log(weather);
-		console.log(weather.weather[0].main);
-		console.log(weather.name);
-		console.log(weather.main.temp);
-		console.log(weather.main.humidity);
-		console.log(weather.main.temp_max);
-		console.log(weather.main.temp_min);
-		console.log(weather.weather[0].icon)
+
 		// 取得したJSONを分割して表示させる
 		// 時間
 		const current = new Date();
