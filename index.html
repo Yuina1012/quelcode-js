@@ -9,17 +9,30 @@
 </head>
 
 <body>
-	<div>Weather</div>
+	<div class="container">
+		<h1>Weather</h1>
+	</div>
+	<div class="city">
+		<label for="city">都市を選択して下さい</label>
+		<select name=region id="city" onchange="selectCity()" multiple>
+			<option value="London" selected>ロンドン</option>
+			<option value="Tokyo">東京</option>
+			<option value="Paris">パリ</option>
+			<option value="NewYork">ニューヨーク</option>
+			<option value="Indonesia">インドネシア</option>
+		</select>
+	</div>
 
-	<h3>都市を選択して下さい</h3>
-	<select name="region" id="weather">
-		<option value="London" selected>ロンドン</option>
-		<option value="Tokyo">東京</option>
-		<option value="Paris">パリ</option>
-		<option value="NewYork">ニューヨーク</option>
-		<option value="Indonesia">インドネシア</option>
-	</select>
-	<script src="https://api.openweathermap.org/data/2.5/weather"></script>
+	<div class="weatherMain">
+		<h3>Now</h3>
+		<div><span id="clock"></span></div>
+		<div><span id="yourLocation"></span></div>
+		<div><span id="result"></span></div>
+		<div id="icon"><div>
+		<div>気温　<span id="temp" class="bold"></span>　℃</div>
+		<div>湿度　<span id="humidity" class="bold"></span>　%</div>
+	</div>
+
 	<script src="js/index.js"></script>
 </body>
 
