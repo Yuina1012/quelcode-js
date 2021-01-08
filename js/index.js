@@ -15,7 +15,7 @@ const selectCity = () => {
 		// 時間
 		const current = new Date();
 		const clock = document.getElementById('clock');
-		clock.textContent = current.toLocaleDateString() + current.toLocaleTimeString();
+		clock.textContent = current.toLocaleDateString() + '\n' + current.toLocaleTimeString();
 		// 選択した都市
 		const yourLocation = weather.name;
 		document.getElementById('yourLocation').innerHTML = yourLocation;
