@@ -1,5 +1,5 @@
 // API呼び出す
-const callApi = async (city = 'London') =>  {
+const callApi = async (city = 'London') => {
 	const appId = "4b5774e9f3d2a07b84f0f2f88e486224";
 	const requestUrl = "https://api.openweathermap.org/data/2.5/weather?APPID=" + appId + "&lang=ja&units=metric&q=" + city + ",jp;";
 	const res = await fetch(requestUrl);
