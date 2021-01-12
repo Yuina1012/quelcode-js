@@ -1,4 +1,3 @@
-const city = 'London'; //デフォルト
 // API呼び出す
 async function callApi(city = 'London') {
 	const appId = "4b5774e9f3d2a07b84f0f2f88e486224";
