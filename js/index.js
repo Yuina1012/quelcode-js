@@ -1,5 +1,5 @@
 // API呼び出す
-async function callApi(city = 'London') {
+const callApi = async (city = 'London') =>  {
 	const appId = "4b5774e9f3d2a07b84f0f2f88e486224";
 	const requestUrl = "https://api.openweathermap.org/data/2.5/weather?APPID=" + appId + "&lang=ja&units=metric&q=" + city + ",jp;";
 	const res = await fetch(requestUrl);
@@ -23,20 +23,19 @@ async function callApi(city = 'London') {
 	const humidity = weather.main.humidity;
 	document.getElementById("humidity").innerHTML = humidity;
 	// お天気アイコン
-	const icon = document.getElementById('icon');
 	const iconcode = weather.weather[0].icon;
 	const iconurl = "http://openweathermap.org/img/w/" + iconcode + ".png";
 	document.getElementById('icon').innerHTML = '<img src = ' + iconurl + '>'
 	// イベント発生したときにプルダウンの選択した都市を取得
-}
+};
 const selectCity = () => {
 	const city = document.getElementById('city').value;
 	callApi(city)
 		.catch(err => {
 			console.log(err);
 		})
-}
+};
 callApi()
 	.catch(err => {
 		console.log(err);
-	})
+	});
