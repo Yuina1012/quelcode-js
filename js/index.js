@@ -25,7 +25,7 @@ const callApi = async (city = 'London') => {
 	// お天気アイコン
 	const iconcode = weather.weather[0].icon;
 	const iconurl = "http://openweathermap.org/img/w/" + iconcode + ".png";
-	document.getElementById('icon').innerHTML = '<img src = ' + iconurl + '>'
+	document.getElementById('icon').innerHTML = '<img src = ' + iconurl + '>';
 	// イベント発生したときにプルダウンの選択した都市を取得
 };
 const selectCity = () => {
@@ -33,9 +33,6 @@ const selectCity = () => {
 	callApi(city)
 		.catch(err => {
 			console.log(err);
-		})
+		});
 };
-callApi()
-	.catch(err => {
-		console.log(err);
-	});
+callApi().catch(console.log);
